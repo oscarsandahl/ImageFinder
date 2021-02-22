@@ -118,17 +118,9 @@
 		63E61C7225E3D02D007B5A4D /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				63E61C7325E3D045007B5A4D /* Base.lproj */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		63E61C7325E3D045007B5A4D /* Base.lproj */ = {
-			isa = PBXGroup;
-			children = (
 				63A4B33325E3B777001C4F62 /* Main.storyboard */,
 			);
-			path = Base.lproj;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
