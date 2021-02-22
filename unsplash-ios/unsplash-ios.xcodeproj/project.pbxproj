@@ -56,15 +56,79 @@
 		63A4B32C25E3B777001C4F62 /* unsplash-ios */ = {
 			isa = PBXGroup;
 			children = (
-				63A4B32D25E3B777001C4F62 /* AppDelegate.swift */,
-				63A4B32F25E3B777001C4F62 /* SceneDelegate.swift */,
+				63E61C7125E3CE8C007B5A4D /* Scene */,
+				63E61C7025E3CE83007B5A4D /* Resources */,
+				63E61C6F25E3CE7D007B5A4D /* Model */,
+				63E61C6E25E3CE73007B5A4D /* Configs */,
+				63E61C6D25E3CE6C007B5A4D /* Backend */,
+				63E61C6B25E3CE47007B5A4D /* Application */,
 				63A4B33125E3B777001C4F62 /* ViewController.swift */,
-				63A4B33325E3B777001C4F62 /* Main.storyboard */,
-				63A4B33625E3B778001C4F62 /* Assets.xcassets */,
 				63A4B33825E3B778001C4F62 /* LaunchScreen.storyboard */,
-				63A4B33B25E3B778001C4F62 /* Info.plist */,
 			);
 			path = "unsplash-ios";
+			sourceTree = "<group>";
+		};
+		63E61C6B25E3CE47007B5A4D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				63A4B32F25E3B777001C4F62 /* SceneDelegate.swift */,
+				63A4B32D25E3B777001C4F62 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		63E61C6D25E3CE6C007B5A4D /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		63E61C6E25E3CE73007B5A4D /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				63A4B33B25E3B778001C4F62 /* Info.plist */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		63E61C6F25E3CE7D007B5A4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63E61C7025E3CE83007B5A4D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63A4B33625E3B778001C4F62 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		63E61C7125E3CE8C007B5A4D /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				63E61C7225E3D02D007B5A4D /* Storyboards */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		63E61C7225E3D02D007B5A4D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				63E61C7325E3D045007B5A4D /* Base.lproj */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		63E61C7325E3D045007B5A4D /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				63A4B33325E3B777001C4F62 /* Main.storyboard */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYL6QL5S85;
-				INFOPLIST_FILE = "unsplash-ios/Info.plist";
+				INFOPLIST_FILE = "unsplash-ios/Configs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +371,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYL6QL5S85;
-				INFOPLIST_FILE = "unsplash-ios/Info.plist";
+				INFOPLIST_FILE = "unsplash-ios/Configs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
