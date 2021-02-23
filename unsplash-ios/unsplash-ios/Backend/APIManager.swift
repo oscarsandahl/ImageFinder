@@ -25,8 +25,8 @@ class APIManager {
                 guard let data = data else { return }
                 do {
                     let result = try JSONDecoder().decode(Image.self, from: data)
-                    if let decodedString = result.urls["full"] {
-                        randomPhotoCompletionHandler(decodedString, nil)
+                    if let decodedString = result.urls {
+                        randomPhotoCompletionHandler(decodedString["full"], nil)
                     }
                 } catch let jsonErr {
                     print("Error serializing:", jsonErr)
