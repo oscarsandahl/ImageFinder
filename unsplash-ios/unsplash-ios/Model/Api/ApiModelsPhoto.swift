@@ -8,6 +8,6 @@
 import Foundation
 
 struct Image: Decodable {
-    let description: String
-    let urls: [String:String]
+    let description: String?
+    let urls: [String:String]?
 }
