@@ -19,18 +19,20 @@ class APIManager {
         return "client_id=\(accessKey)"
     }
     
-    func getRandomPhoto(randomPhotoCompletionHandler: @escaping (String?, Error?) -> Void) {
+    func getRandomPhoto(randomPhotoCompletionHandler: @escaping (Result<String, Error>) -> Void) {
         if let url = URL(string: "\(baseUrl)\(randomPhotoEndpoint)\(getAccessKey())") {
             URLSession.shared.dataTask(with: url) { (data, response, err) in
                 guard let data = data else { return }
                 do {
                     let result = try JSONDecoder().decode(Image.self, from: data)
-                    if let decodedString = result.urls {
-                        randomPhotoCompletionHandler(decodedString["full"], nil)
+                    if let photoDictionary = result.urls {
+                        if let photoFull = photoDictionary["full"] {
+                            randomPhotoCompletionHandler(.success(photoFull))
+                        }
                     }
                 } catch let jsonErr {
-                    print("Error serializing:", jsonErr)
-                    randomPhotoCompletionHandler(nil, jsonErr)
+                    print("Error decoding random image:", jsonErr)
+                    randomPhotoCompletionHandler(.failure(jsonErr))
                 }
             }.resume()
         }
