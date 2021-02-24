@@ -41,16 +41,18 @@ class APIManager {
     
     func getPhotosFromQuery(query: String, itemsPerPage: Int, queryPhotosCompletionHandler: @escaping (Result<QueryResult, Error>) -> Void) {
         let queryUrl = "\(baseUrl)\(searchPhotoEndpoint)\(getAccessKey())&query=\(query)&per_page=\(itemsPerPage)"
-        guard let url = URL(string: queryUrl) else { return }
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
-            guard let data = data else { return }
-            do {
-                let result = try JSONDecoder().decode(QueryResult.self, from: data)
-                queryPhotosCompletionHandler(.success(result))
-            } catch let jsonErr {
-                print("Error decoding query:", jsonErr)
-                queryPhotosCompletionHandler(.failure(jsonErr))
-            }
-        }.resume()
+        if let url = URL(string: queryUrl) {
+            URLSession.shared.dataTask(with: url) { (data, response, err) in
+                if let data = data {
+                    do {
+                        let result = try JSONDecoder().decode(QueryResult.self, from: data)
+                        queryPhotosCompletionHandler(.success(result))
+                    } catch let jsonErr {
+                        print("Error decoding query:", jsonErr)
+                        queryPhotosCompletionHandler(.failure(jsonErr))
+                    }
+                }
+            }.resume()
+        }
     }
 }
