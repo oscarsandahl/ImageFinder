@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct QueryResult: Decodable {
+    let results: [Image]
+}
+
 struct Image: Decodable {
     let description: String?
     let urls: [String:String]?
