@@ -14,6 +14,7 @@ class APIManager {
     let secretKey = "ra95FPU6vtIexK5w0R5F59a5ILGwOY2vVMQ8QYR3yjU"
     let baseUrl = "https://api.unsplash.com/"
     let randomPhotoEndpoint = "photos/random?"
+    let searchPhotoEndpoint = "search/photos?"
     
     func getAccessKey() -> String {
         return "client_id=\(accessKey)"
