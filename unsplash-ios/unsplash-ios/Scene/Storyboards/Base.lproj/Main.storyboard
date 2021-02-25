@@ -24,10 +24,18 @@
                                 <rect key="frame" x="20" y="420" width="374" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="pXb-dv-Lm4">
+                                <rect key="frame" x="374" y="64" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Y4b-S4-WMl"/>
+                                    <constraint firstAttribute="height" constant="20" id="o5D-FW-Fc8"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pXb-dv-Lm4" secondAttribute="trailing" constant="20" id="6Oz-m6-H76"/>
                             <constraint firstItem="mV8-UE-Z3s" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8yT-v2-NC7"/>
                             <constraint firstItem="Qra-Q4-c5a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BCh-aS-JdW"/>
                             <constraint firstItem="mV8-UE-Z3s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V6Q-H5-zXO"/>
@@ -36,11 +44,13 @@
                             <constraint firstItem="Qra-Q4-c5a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XLT-MR-yB5"/>
                             <constraint firstItem="mV8-UE-Z3s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sIp-8c-g5K"/>
                             <constraint firstAttribute="bottom" secondItem="Qra-Q4-c5a" secondAttribute="bottom" id="vBL-wK-ejq"/>
+                            <constraint firstItem="pXb-dv-Lm4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="vsv-dD-0fN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0me-Cv-W5O"/>
                     <connections>
                         <outlet property="backgroundImage" destination="Qra-Q4-c5a" id="2x1-2S-SpW"/>
+                        <outlet property="loadingIndicator" destination="pXb-dv-Lm4" id="Ggh-Qs-9G2"/>
                         <outlet property="searchBar" destination="mV8-UE-Z3s" id="xUh-w7-Nh8"/>
                     </connections>
                 </viewController>

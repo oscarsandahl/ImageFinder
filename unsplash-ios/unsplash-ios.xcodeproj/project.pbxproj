@@ -53,6 +53,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		6390426325E78E46003372FA /* SearchPhotos */ = {
+			isa = PBXGroup;
+			children = (
+				63A4B33125E3B777001C4F62 /* ViewController.swift */,
+			);
+			path = SearchPhotos;
+			sourceTree = "<group>";
+		};
 		63A4B32125E3B777001C4F62 = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +86,6 @@
 				63E61C6E25E3CE73007B5A4D /* Configs */,
 				63E61C6D25E3CE6C007B5A4D /* Backend */,
 				63E61C6B25E3CE47007B5A4D /* Application */,
-				63A4B33125E3B777001C4F62 /* ViewController.swift */,
 				63A4B33825E3B778001C4F62 /* LaunchScreen.storyboard */,
 			);
 			path = "unsplash-ios";
@@ -130,6 +137,7 @@
 		63E61C7125E3CE8C007B5A4D /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				6390426325E78E46003372FA /* SearchPhotos */,
 				63E61C7225E3D02D007B5A4D /* Storyboards */,
 			);
 			path = Scene;

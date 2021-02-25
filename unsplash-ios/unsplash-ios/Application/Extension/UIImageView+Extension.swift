@@ -8,13 +8,17 @@
 import UIKit
 
 extension UIImageView {
-    func fetchImageFromURL(from url: String) {
+    func fetchImageFromURL(from url: String, spinner: UIActivityIndicatorView?) {
         guard let imageURL = URL(string: url) else { return }
         DispatchQueue.global().async {
             guard let imageData = try? Data(contentsOf: imageURL) else { return }
             let image = UIImage(data: imageData)
             DispatchQueue.main.async {
                 self.image = image
+                if let spinner = spinner {
+                    spinner.isHidden = true
+                    spinner.stopAnimating()
+                }
                 UIView.animate(withDuration: 1.0) {
                     self.alpha = 1.0
                 }
