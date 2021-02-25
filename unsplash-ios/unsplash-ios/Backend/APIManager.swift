@@ -14,6 +14,7 @@ class APIManager {
     let secretKey = "ra95FPU6vtIexK5w0R5F59a5ILGwOY2vVMQ8QYR3yjU"
     let baseUrl = "https://api.unsplash.com/"
     let randomPhotoEndpoint = "photos/random?"
+    let searchPhotoEndpoint = "search/photos?"
     
     func getAccessKey() -> String {
         return "client_id=\(accessKey)"
@@ -38,4 +39,24 @@ class APIManager {
         }
     }
     
+    func getPhotosFromQuery(query: String, itemsPerPage: Int, queryPhotosCompletionHandler: @escaping BackendCallback<QueryResult>) {
+        let queryUrl = "\(baseUrl)\(searchPhotoEndpoint)\(getAccessKey())&query=\(query)&per_page=\(itemsPerPage)"
+        guard let url = URL(string: queryUrl) else {
+            queryPhotosCompletionHandler(.failure(.empty))
+            return
+        }
+        URLSession.shared.dataTask(with: url) { (data, response, err) in
+            guard let data = data else {
+                queryPhotosCompletionHandler(.failure(.empty))
+                return
+            }
+            do {
+                let result = try JSONDecoder().decode(QueryResult.self, from: data)
+                queryPhotosCompletionHandler(.success(result))
+            } catch let jsonError {
+                print(jsonError)
+                queryPhotosCompletionHandler(.failure(.error(message: "Error decoding query")))
+            }
+        }.resume()
+    }
 }
