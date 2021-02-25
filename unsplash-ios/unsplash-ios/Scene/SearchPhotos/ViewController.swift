@@ -24,13 +24,8 @@ class ViewController: UIViewController {
         APIManager.shared.getRandomPhoto { (result) in
             switch result {
             case.success(let url):
-                self.backgroundImage.fetchImageFromURL(from: url) { (callBack) in
-                    switch callBack {
-                    case.success():
-                        self.showSpinner(isLoading: false)
-                    case.failure(_):
-                        self.showSpinner(isLoading: false)
-                    }
+                self.backgroundImage.fetchImageFromURL(from: url) { (_) in
+                    self.showSpinner(isLoading: false)
                 }
             case.failure(let error):
                 print(error.localizedDescription)
