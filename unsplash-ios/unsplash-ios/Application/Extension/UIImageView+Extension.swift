@@ -8,17 +8,20 @@
 import UIKit
 
 extension UIImageView {
-    func fetchImageFromURL(from url: String, spinner: UIActivityIndicatorView?) {
-        guard let imageURL = URL(string: url) else { return }
+    func fetchImageFromURL(from url: String, callback: @escaping BackendCallback<Void>) {
+        guard let imageURL = URL(string: url) else {
+            callback(.failure(.empty))
+            return
+        }
         DispatchQueue.global().async {
-            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+            guard let imageData = try? Data(contentsOf: imageURL) else {
+                callback(.failure(.empty))
+                return
+            }
             let image = UIImage(data: imageData)
             DispatchQueue.main.async {
                 self.image = image
-                if let spinner = spinner {
-                    spinner.isHidden = true
-                    spinner.stopAnimating()
-                }
+                callback(.success(()))
                 UIView.animate(withDuration: 1.0) {
                     self.alpha = 1.0
                 }
