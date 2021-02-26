@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        searchBar.delegate = self
         fetchBackground()
     }
     
@@ -46,3 +46,9 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let destination = QueryGridViewController()
+        navigationController?.pushViewController(destination, animated: true)
+    }
+}
