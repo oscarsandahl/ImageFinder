@@ -11,7 +11,6 @@ class QueryGridViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationController?.isNavigationBarHidden = false
     }
     
