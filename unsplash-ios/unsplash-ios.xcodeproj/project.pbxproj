@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		635A30D525ECE1F20007FED6 /* QueryGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A30D325ECE1F20007FED6 /* QueryGridCell.swift */; };
+		635A30D625ECE1F20007FED6 /* QueryGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635A30D425ECE1F20007FED6 /* QueryGridCell.xib */; };
 		6390425525E64A81003372FA /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6390425425E64A81003372FA /* UIImageView+Extension.swift */; };
 		6390425F25E69BF6003372FA /* BackendCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6390425E25E69BF6003372FA /* BackendCallback.swift */; };
 		63A422F825E8DBD300A05500 /* QueryGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A422F725E8DBD300A05500 /* QueryGridViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		635A30D325ECE1F20007FED6 /* QueryGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryGridCell.swift; sourceTree = "<group>"; };
+		635A30D425ECE1F20007FED6 /* QueryGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QueryGridCell.xib; sourceTree = "<group>"; };
 		6390425425E64A81003372FA /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		6390425E25E69BF6003372FA /* BackendCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendCallback.swift; sourceTree = "<group>"; };
 		63A422F725E8DBD300A05500 /* QueryGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryGridViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		635A30D225ECE1BD0007FED6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				635A30D325ECE1F20007FED6 /* QueryGridCell.swift */,
+				635A30D425ECE1F20007FED6 /* QueryGridCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		6390425325E64A67003372FA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +79,7 @@
 		63A422F625E8DB9500A05500 /* QueryGrid */ = {
 			isa = PBXGroup;
 			children = (
+				635A30D225ECE1BD0007FED6 /* Cells */,
 				63A422F725E8DBD300A05500 /* QueryGridViewController.swift */,
 			);
 			path = QueryGrid;
@@ -229,6 +243,7 @@
 			files = (
 				63A4B33A25E3B778001C4F62 /* LaunchScreen.storyboard in Resources */,
 				63A4B33725E3B778001C4F62 /* Assets.xcassets in Resources */,
+				635A30D625ECE1F20007FED6 /* QueryGridCell.xib in Resources */,
 				63A4B33525E3B777001C4F62 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6390425F25E69BF6003372FA /* BackendCallback.swift in Sources */,
+				635A30D525ECE1F20007FED6 /* QueryGridCell.swift in Sources */,
 				6390425525E64A81003372FA /* UIImageView+Extension.swift in Sources */,
 				63E61C8725E3F074007B5A4D /* ApiModelsPhoto.swift in Sources */,
 				63A422F825E8DBD300A05500 /* QueryGridViewController.swift in Sources */,

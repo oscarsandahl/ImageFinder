@@ -26,7 +26,7 @@ class QueryGridViewController: UIViewController {
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(QueryGridCell.nib, forCellWithReuseIdentifier: QueryGridCell.reuseIdentifier)
         self.view.addSubview(collectionView)
     }
 
@@ -42,9 +42,11 @@ extension QueryGridViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        
-        cell.backgroundColor = .gray
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: QueryGridCell.reuseIdentifier, for: indexPath)
+
+        if let cell = cell as? QueryGridCell {
+            cell.showSpinner(isLoading: true)
+        }
         
         return cell
     }
