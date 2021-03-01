@@ -18,9 +18,35 @@ class QueryGridCell: UICollectionViewCell {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
     
+    var imageModel: Image? {
+        didSet {
+            if let imageModel = imageModel {
+                if let imageUrls = imageModel.urls {
+                    if let urlFull = imageUrls["full"] {
+                        setImage(imageUrl: urlFull)
+                    }
+                }
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setImage(imageUrl: String) {
+        self.showSpinner(isLoading: true)
+        image.fetchImageFromURL(from: imageUrl) { (result) in
+            switch result {
+            case.success():
+                self.image.isHidden = false
+                self.showSpinner(isLoading: false)
+            case.failure(let error):
+                print(error.localizedDescription)
+                self.showSpinner(isLoading: false)
+            }
+        }
     }
     
     func showSpinner(isLoading: Bool) {

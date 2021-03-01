@@ -60,23 +60,7 @@ extension QueryGridViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: QueryGridCell.reuseIdentifier, for: indexPath)
         if let cell = cell as? QueryGridCell {
-            cell.showSpinner(isLoading: true)
-            if let queryResult = presenter.queryResult?.results {
-                if let imageUrls = queryResult[indexPath.row].urls {
-                    if let image = imageUrls["full"] {
-                        cell.image.fetchImageFromURL(from: image) { (result) in
-                            switch result {
-                            case.success():
-                                cell.image.isHidden = false
-                                cell.showSpinner(isLoading: false)
-                            case.failure(let error):
-                                print(error.localizedDescription)
-                                cell.showSpinner(isLoading: false)
-                            }
-                        }
-                    }
-                }
-            }
+            cell.imageModel = presenter.queryResult?.results[indexPath.row]
         }
         return cell
     }
