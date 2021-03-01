@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		635A30D525ECE1F20007FED6 /* QueryGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A30D325ECE1F20007FED6 /* QueryGridCell.swift */; };
 		635A30D625ECE1F20007FED6 /* QueryGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635A30D425ECE1F20007FED6 /* QueryGridCell.xib */; };
+		635A30D925ED11B00007FED6 /* QueryGirdPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A30D825ED11B00007FED6 /* QueryGirdPresenter.swift */; };
 		6390425525E64A81003372FA /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6390425425E64A81003372FA /* UIImageView+Extension.swift */; };
 		6390425F25E69BF6003372FA /* BackendCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6390425E25E69BF6003372FA /* BackendCallback.swift */; };
 		63A422F825E8DBD300A05500 /* QueryGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A422F725E8DBD300A05500 /* QueryGridViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		635A30D325ECE1F20007FED6 /* QueryGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryGridCell.swift; sourceTree = "<group>"; };
 		635A30D425ECE1F20007FED6 /* QueryGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QueryGridCell.xib; sourceTree = "<group>"; };
+		635A30D825ED11B00007FED6 /* QueryGirdPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryGirdPresenter.swift; sourceTree = "<group>"; };
 		6390425425E64A81003372FA /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		6390425E25E69BF6003372FA /* BackendCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendCallback.swift; sourceTree = "<group>"; };
 		63A422F725E8DBD300A05500 /* QueryGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryGridViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				635A30D225ECE1BD0007FED6 /* Cells */,
 				63A422F725E8DBD300A05500 /* QueryGridViewController.swift */,
+				635A30D825ED11B00007FED6 /* QueryGirdPresenter.swift */,
 			);
 			path = QueryGrid;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				63A4B33225E3B777001C4F62 /* ViewController.swift in Sources */,
 				63A4B32E25E3B777001C4F62 /* AppDelegate.swift in Sources */,
 				63A4B33025E3B777001C4F62 /* SceneDelegate.swift in Sources */,
+				635A30D925ED11B00007FED6 /* QueryGirdPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
