@@ -18,17 +18,16 @@ class QueryGirdPresenter {
     }
     
     func fetchQuery() {
-        if let query = query {
-            APIManager.shared.getPhotosFromQuery(query: query, itemsPerPage: 24) { (result) in
-                switch result {
-                case.success(let data):
-                    DispatchQueue.main.async {
-                        self.queryResult = data
-                        self.view?.collectionView.reloadData()
-                    }
-                case.failure(let error):
-                    print(error.localizedDescription)
+        guard let query = query else { return }
+        APIManager.shared.getPhotosFromQuery(query: query, itemsPerPage: 24) { (result) in
+            switch result {
+            case.success(let data):
+                DispatchQueue.main.async {
+                    self.queryResult = data
+                    self.view?.collectionView.reloadData()
                 }
+            case.failure(let error):
+                print(error.localizedDescription)
             }
         }
     }
