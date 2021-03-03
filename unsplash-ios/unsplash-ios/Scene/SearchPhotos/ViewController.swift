@@ -48,7 +48,9 @@ class ViewController: UIViewController {
 
 extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let destination = QueryGridViewController()
-        navigationController?.pushViewController(destination, animated: true)
+        if let query = searchBar.text {
+            let queryGridViewController = QueryGridViewController.initViewController(query: query)
+            navigationController?.pushViewController(queryGridViewController, animated: true)
+        }
     }
 }
