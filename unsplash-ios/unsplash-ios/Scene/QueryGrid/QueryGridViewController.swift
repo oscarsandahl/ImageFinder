@@ -43,7 +43,7 @@ class QueryGridViewController: UIViewController {
     }
     
     func openExpandedPhoto(imageUrl: String) {
-        let expandedPhotoViewController = ExpandedPhotoViewController.initViewController()
+        let expandedPhotoViewController = ExpandedPhotoViewController.initViewController(imageUrl: imageUrl)
         navigationController?.pushViewController(expandedPhotoViewController, animated: true)
     }
 }

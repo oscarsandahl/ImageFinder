@@ -9,8 +9,10 @@ import Foundation
 
 class ExpandedPhotoPresenter {
     weak var view: ExpandedPhotoViewController?
+    var imageUrl: String?
     
-    init(_ view: ExpandedPhotoViewController) {
+    init(_ view: ExpandedPhotoViewController, imageUrl: String) {
         self.view = view
+        self.imageUrl = imageUrl
     }
 }

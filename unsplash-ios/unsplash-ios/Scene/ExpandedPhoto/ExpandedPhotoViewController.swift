@@ -16,9 +16,9 @@ class ExpandedPhotoViewController: UIViewController {
     var presenter: ExpandedPhotoPresenter!
     
     // MARK: - Initialization
-    class func initViewController() -> UIViewController {
+    class func initViewController(imageUrl: String) -> UIViewController {
         let expandedPhotoViewController = ExpandedPhotoViewController()
-        expandedPhotoViewController.presenter = ExpandedPhotoPresenter(expandedPhotoViewController)
+        expandedPhotoViewController.presenter = ExpandedPhotoPresenter(expandedPhotoViewController, imageUrl: imageUrl)
         return expandedPhotoViewController
     }
     
@@ -26,7 +26,6 @@ class ExpandedPhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
   
 }
