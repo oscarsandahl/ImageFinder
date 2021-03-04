@@ -84,18 +84,25 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JKg-t8-TiU">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Zul-Pc-Q4m">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mMw-8h-14g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JKg-t8-TiU" firstAttribute="bottom" secondItem="mMw-8h-14g" secondAttribute="bottom" id="CS6-SN-Dpj"/>
                             <constraint firstItem="JKg-t8-TiU" firstAttribute="top" secondItem="mMw-8h-14g" secondAttribute="top" id="QKn-U5-rAm"/>
+                            <constraint firstItem="Zul-Pc-Q4m" firstAttribute="centerY" secondItem="Qdb-eP-Zwj" secondAttribute="centerY" id="Zzi-zD-xeO"/>
                             <constraint firstItem="JKg-t8-TiU" firstAttribute="leading" secondItem="mMw-8h-14g" secondAttribute="leading" id="bhp-tq-I6W"/>
+                            <constraint firstItem="Zul-Pc-Q4m" firstAttribute="centerX" secondItem="Qdb-eP-Zwj" secondAttribute="centerX" id="na7-Rv-Eq5"/>
                             <constraint firstItem="JKg-t8-TiU" firstAttribute="trailing" secondItem="mMw-8h-14g" secondAttribute="trailing" id="xfX-oj-fiT"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="LGu-Eh-dB6"/>
                     <connections>
                         <outlet property="expandedPhoto" destination="JKg-t8-TiU" id="lpf-Gh-ayB"/>
+                        <outlet property="loadingIndicator" destination="Zul-Pc-Q4m" id="vwn-Su-uhk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eG6-0H-p7N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

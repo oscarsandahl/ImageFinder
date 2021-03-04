@@ -11,6 +11,7 @@ class ExpandedPhotoViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var expandedPhoto: UIImageView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     // MARK: - Variables
     var presenter: ExpandedPhotoPresenter!
