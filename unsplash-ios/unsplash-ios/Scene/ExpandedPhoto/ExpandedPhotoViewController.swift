@@ -8,11 +8,19 @@
 import UIKit
 
 class ExpandedPhotoViewController: UIViewController {
-
-    // MARK: - Variables
+    
+    // MARK: - Outlets
     @IBOutlet weak var expandedPhoto: UIImageView!
     
+    // MARK: - Variables
+    var presenter: ExpandedPhotoPresenter!
+    
     // MARK: - Initialization
+    class func initViewController() -> UIViewController {
+        let expandedPhotoViewController = ExpandedPhotoViewController()
+        expandedPhotoViewController.presenter = ExpandedPhotoPresenter(expandedPhotoViewController)
+        return expandedPhotoViewController
+    }
     
     // MARK: - Managing view
     override func viewDidLoad() {

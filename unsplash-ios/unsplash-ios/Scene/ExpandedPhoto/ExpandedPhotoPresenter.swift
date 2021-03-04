@@ -8,5 +8,9 @@
 import Foundation
 
 class ExpandedPhotoPresenter {
+    weak var view: ExpandedPhotoViewController?
     
+    init(_ view: ExpandedPhotoViewController) {
+        self.view = view
+    }
 }
