@@ -9,8 +9,12 @@ import UIKit
 
 class ExpandedPhotoViewController: UIViewController {
 
+    // MARK: - Variables
     @IBOutlet weak var expandedPhoto: UIImageView!
     
+    // MARK: - Initialization
+    
+    // MARK: - Managing view
     override func viewDidLoad() {
         super.viewDidLoad()
 
