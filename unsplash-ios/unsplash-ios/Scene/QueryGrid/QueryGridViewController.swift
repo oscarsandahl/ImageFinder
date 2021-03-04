@@ -41,6 +41,11 @@ class QueryGridViewController: UIViewController {
         collectionView.register(QueryGridCell.nib, forCellWithReuseIdentifier: QueryGridCell.reuseIdentifier)
         self.view.addSubview(collectionView)
     }
+    
+    func openExpandedPhoto(imageUrl: String) {
+        let expandedPhotoViewController = ExpandedPhotoViewController.initViewController()
+        navigationController?.pushViewController(expandedPhotoViewController, animated: true)
+    }
 }
 
 // MARK: - CollectionView data source
@@ -68,7 +73,9 @@ extension QueryGridViewController: UICollectionViewDataSource {
 
 // MARK: - CollectionView delegate
 extension QueryGridViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.openExpandedPhoto(imageUrl: presenter.queryResult?.results[indexPath.row].urls?["full"])
+    }
 }
 
 // MARK: - CollectionView flow layout

@@ -31,4 +31,9 @@ class QueryGirdPresenter {
             }
         }
     }
+    
+    func openExpandedPhoto(imageUrl: String?) {
+        guard let imageUrl = imageUrl else { return }
+        view?.openExpandedPhoto(imageUrl: imageUrl)
+    }
 }
