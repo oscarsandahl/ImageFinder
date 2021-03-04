@@ -73,6 +73,21 @@
             </objects>
             <point key="canvasLocation" x="1874" y="119"/>
         </scene>
+        <!--Expanded Photo View Controller-->
+        <scene sceneID="Zme-YE-7lP">
+            <objects>
+                <viewController id="UCs-Nj-6ep" customClass="ExpandedPhotoViewController" customModule="unsplash_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qdb-eP-Zwj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mMw-8h-14g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eG6-0H-p7N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2723" y="119"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="LOd-Vz-6xW">
             <objects>
