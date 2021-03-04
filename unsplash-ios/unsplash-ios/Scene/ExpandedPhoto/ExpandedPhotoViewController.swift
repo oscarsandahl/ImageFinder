@@ -9,6 +9,8 @@ import UIKit
 
 class ExpandedPhotoViewController: UIViewController {
 
+    @IBOutlet weak var expandedPhoto: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
