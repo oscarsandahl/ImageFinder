@@ -15,4 +15,12 @@ class ExpandedPhotoPresenter {
         self.view = view
         self.imageUrl = imageUrl
     }
+    
+    func fetchImage() {
+        guard let imageUrl = imageUrl else { return }
+        view?.showSpinner(isLoading: true)
+        view?.expandedPhoto.fetchImageFromURL(from: imageUrl) { (_) in
+            self.view?.showSpinner(isLoading: false)
+        }
+    }
 }
