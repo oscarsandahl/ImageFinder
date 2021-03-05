@@ -61,7 +61,7 @@
         <!--Query Grid View Controller-->
         <scene sceneID="lRe-cC-mUx">
             <objects>
-                <viewController id="wbw-7X-LT0" customClass="QueryGridViewController" customModule="unsplash_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QueryGridId" id="wbw-7X-LT0" customClass="QueryGridViewController" customModule="unsplash_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0xI-L6-8qW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,7 +76,7 @@
         <!--Expanded Photo View Controller-->
         <scene sceneID="Zme-YE-7lP">
             <objects>
-                <viewController id="UCs-Nj-6ep" customClass="ExpandedPhotoViewController" customModule="unsplash_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExpandedPhotoId" id="UCs-Nj-6ep" customClass="ExpandedPhotoViewController" customModule="unsplash_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qdb-eP-Zwj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
