@@ -19,7 +19,7 @@ class ExpandedPhotoPresenter {
     func fetchImage() {
         guard let imageUrl = imageUrl else { return }
         view?.showSpinner(isLoading: true)
-        view?.expandedPhoto.fetchImageFromURL(from: imageUrl) { (_) in
+        self.view?.expandedPhoto.kf.setImage(with: URL(string: imageUrl)) { (_) in
             self.view?.showSpinner(isLoading: false)
         }
     }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class QueryGridCell: UICollectionViewCell {
     
@@ -33,15 +34,8 @@ class QueryGridCell: UICollectionViewCell {
     
     func setImage(imageUrl: String) {
         self.showSpinner(isLoading: true)
-        image.fetchImageFromURL(from: imageUrl) { (result) in
-            switch result {
-            case.success():
-                self.image.isHidden = false
-                self.showSpinner(isLoading: false)
-            case.failure(let error):
-                print(error.localizedDescription)
-                self.showSpinner(isLoading: false)
-            }
+        self.image.kf.setImage(with: URL(string: imageUrl)) { (_) in
+            self.showSpinner(isLoading: false)
         }
     }
     
