@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
 
@@ -24,8 +25,10 @@ class ViewController: UIViewController {
         APIManager.shared.getRandomPhoto { (result) in
             switch result {
             case.success(let url):
-                self.backgroundImage.fetchImageFromURL(from: url) { (_) in
-                    self.showSpinner(isLoading: false)
+                DispatchQueue.main.async {
+                    self.backgroundImage.kf.setImage(with: URL(string: url)) { (_) in
+                        self.showSpinner(isLoading: false)
+                    }
                 }
             case.failure(let error):
                 print(error.localizedDescription)
