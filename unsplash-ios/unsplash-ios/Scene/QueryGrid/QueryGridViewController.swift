@@ -23,13 +23,8 @@ class QueryGridViewController: UIViewController {
     // MARK: - Managing view
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = false
         setupCollectionView()
         presenter.fetchQuery()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = true
     }
     
     // MARK: - Functions
