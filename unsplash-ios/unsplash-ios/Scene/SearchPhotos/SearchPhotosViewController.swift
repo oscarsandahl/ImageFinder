@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class ViewController: UIViewController {
+class SearchPhotosViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - Searchbar delegate
-extension ViewController: UISearchBarDelegate {
+extension SearchPhotosViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let query = searchBar.text {
             let queryGridViewController = QueryGridViewController.initViewController(query: query)

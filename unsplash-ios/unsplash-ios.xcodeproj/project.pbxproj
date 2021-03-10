@@ -17,7 +17,7 @@
 		63A422F825E8DBD300A05500 /* QueryGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A422F725E8DBD300A05500 /* QueryGridViewController.swift */; };
 		63A4B32E25E3B777001C4F62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A4B32D25E3B777001C4F62 /* AppDelegate.swift */; };
 		63A4B33025E3B777001C4F62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A4B32F25E3B777001C4F62 /* SceneDelegate.swift */; };
-		63A4B33225E3B777001C4F62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A4B33125E3B777001C4F62 /* ViewController.swift */; };
+		63A4B33225E3B777001C4F62 /* SearchPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A4B33125E3B777001C4F62 /* SearchPhotosViewController.swift */; };
 		63A4B33525E3B777001C4F62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A4B33325E3B777001C4F62 /* Main.storyboard */; };
 		63A4B33725E3B778001C4F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A4B33625E3B778001C4F62 /* Assets.xcassets */; };
 		63A4B33A25E3B778001C4F62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A4B33825E3B778001C4F62 /* LaunchScreen.storyboard */; };
@@ -38,7 +38,7 @@
 		63A4B32A25E3B777001C4F62 /* unsplash-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "unsplash-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A4B32D25E3B777001C4F62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63A4B32F25E3B777001C4F62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		63A4B33125E3B777001C4F62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63A4B33125E3B777001C4F62 /* SearchPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotosViewController.swift; sourceTree = "<group>"; };
 		63A4B33425E3B777001C4F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63A4B33625E3B778001C4F62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63A4B33925E3B778001C4F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		6390426325E78E46003372FA /* SearchPhotos */ = {
 			isa = PBXGroup;
 			children = (
-				63A4B33125E3B777001C4F62 /* ViewController.swift */,
+				63A4B33125E3B777001C4F62 /* SearchPhotosViewController.swift */,
 			);
 			path = SearchPhotos;
 			sourceTree = "<group>";
@@ -344,7 +344,7 @@
 				63E61C8725E3F074007B5A4D /* ApiModelsPhoto.swift in Sources */,
 				63A422F825E8DBD300A05500 /* QueryGridViewController.swift in Sources */,
 				63E61C8325E3E515007B5A4D /* APIManager.swift in Sources */,
-				63A4B33225E3B777001C4F62 /* ViewController.swift in Sources */,
+				63A4B33225E3B777001C4F62 /* SearchPhotosViewController.swift in Sources */,
 				63A4B32E25E3B777001C4F62 /* AppDelegate.swift in Sources */,
 				63A4B33025E3B777001C4F62 /* SceneDelegate.swift in Sources */,
 				635A30D925ED11B00007FED6 /* QueryGirdPresenter.swift in Sources */,

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UUp-eX-xO1">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,24 +7,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search Photos View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="unsplash_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SearchPhotosViewController" customModule="unsplash_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qra-Q4-c5a">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                             </imageView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="mV8-UE-Z3s">
-                                <rect key="frame" x="20" y="420" width="374" height="56"/>
+                                <rect key="frame" x="20" y="272" width="560" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="pXb-dv-Lm4">
-                                <rect key="frame" x="374" y="108" width="20" height="20"/>
+                                <rect key="frame" x="560" y="64" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="Y4b-S4-WMl"/>
                                     <constraint firstAttribute="height" constant="20" id="o5D-FW-Fc8"/>
@@ -63,7 +62,7 @@
             <objects>
                 <viewController storyboardIdentifier="QueryGridId" id="wbw-7X-LT0" customClass="QueryGridViewController" customModule="unsplash_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0xI-L6-8qW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ghs-k8-JE8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -78,14 +77,14 @@
             <objects>
                 <viewController storyboardIdentifier="ExpandedPhotoId" id="UCs-Nj-6ep" customClass="ExpandedPhotoViewController" customModule="unsplash_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qdb-eP-Zwj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JKg-t8-TiU">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Zul-Pc-Q4m">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mMw-8h-14g"/>
