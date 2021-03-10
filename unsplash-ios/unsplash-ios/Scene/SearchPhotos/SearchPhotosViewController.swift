@@ -39,27 +39,10 @@ class SearchPhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-        fetchBackground()
+        presenter.fetchBackground()
     }
     
     // MARK: - Functions
-    func fetchBackground() {
-        showSpinner(isLoading: true)
-        APIManager.shared.getRandomPhoto { (result) in
-            switch result {
-            case.success(let url):
-                DispatchQueue.main.async {
-                    self.backgroundImage.kf.setImage(with: URL(string: url)) { (_) in
-                        self.showSpinner(isLoading: false)
-                    }
-                }
-            case.failure(let error):
-                print(error.localizedDescription)
-                self.showSpinner(isLoading: false)
-            }
-        }
-    }
-    
     func showSpinner(isLoading: Bool) {
         if isLoading {
             loadingIndicator.startAnimating()
