@@ -25,8 +25,8 @@ class ExpandedPhotoViewController: UIViewController {
         let storyboard = UIStoryboard(name: ExpandedPhotoViewController.storyboardName, bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: ExpandedPhotoViewController.viewControllerIdentifier)
         
-        if let overviewViewController = viewController as? ExpandedPhotoViewController {
-            overviewViewController.presenter = ExpandedPhotoPresenter(overviewViewController, imageUrl: imageUrl)
+        if let expandedPhotoViewController = viewController as? ExpandedPhotoViewController {
+            expandedPhotoViewController.presenter = ExpandedPhotoPresenter(expandedPhotoViewController, imageUrl: imageUrl)
             
         }
         
