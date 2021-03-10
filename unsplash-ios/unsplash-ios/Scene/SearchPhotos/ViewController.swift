@@ -10,16 +10,19 @@ import Kingfisher
 
 class ViewController: UIViewController {
 
+    // MARK: - Outlets
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
+    // MARK: - Managing view
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         fetchBackground()
     }
     
+    // MARK: - Functions
     func fetchBackground() {
         showSpinner(isLoading: true)
         APIManager.shared.getRandomPhoto { (result) in
@@ -49,6 +52,7 @@ class ViewController: UIViewController {
     
 }
 
+// MARK: - Searchbar delegate
 extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let query = searchBar.text {

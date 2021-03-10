@@ -39,6 +39,7 @@ class ExpandedPhotoViewController: UIViewController {
         presenter.fetchImage()
     }
     
+    // MARK: - Functions
     func showSpinner(isLoading: Bool) {
         if isLoading {
             loadingIndicator.startAnimating()
