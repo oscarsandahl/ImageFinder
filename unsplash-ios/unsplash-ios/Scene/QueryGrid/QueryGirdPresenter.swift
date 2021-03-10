@@ -8,15 +8,19 @@
 import Foundation
 
 class QueryGirdPresenter {
+    
+    // MARK: - Variables
     weak var view: QueryGridViewController?
     var queryResult: QueryResult?
     var query: String?
     
+    // MARK: - Initialization
     init(_ view: QueryGridViewController, query: String) {
         self.view = view
         self.query = query
     }
     
+    // MARK: - Functions
     func fetchQuery() {
         guard let query = query else { return }
         APIManager.shared.getPhotosFromQuery(query: query, itemsPerPage: 24) { (result) in
