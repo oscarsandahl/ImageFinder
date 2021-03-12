@@ -36,27 +36,29 @@ class APIManager {
             url = URL(string: "\(baseUrl)\(searchPhotoEndpoint)\(getAccessKey())&query=\(search)&per_page=\(24)")
         }
         
-        if let url = url {
-            URLSession.shared.dataTask(with: url) { (data, response, err) in
-                guard let data = data else {
-                    callback(.failure(.empty))
-                    return
-                }
-                do {
-                    switch fetchtype {
-                    case .random:
-                        let result = try JSONDecoder().decode(Image.self, from: data)
-                        callback(.success(QueryResult(results: [result])))
-                    case .search:
-                        let result = try JSONDecoder().decode(QueryResult.self, from: data)
-                        callback(.success(result))
-                    }
-                } catch let jsonError {
-                    print(jsonError)
-                    callback(.failure(.error(message: "Error decoding image")))
-                }
-            }.resume()
+        guard let unwrappedUrl = url else {
+            callback(.failure(.empty))
+            return
         }
+        URLSession.shared.dataTask(with: unwrappedUrl) { (data, response, err) in
+            guard let data = data else {
+                callback(.failure(.empty))
+                return
+            }
+            do {
+                switch fetchtype {
+                case .random:
+                    let result = try JSONDecoder().decode(Image.self, from: data)
+                    callback(.success(QueryResult(results: [result])))
+                case .search:
+                    let result = try JSONDecoder().decode(QueryResult.self, from: data)
+                    callback(.success(result))
+                }
+            } catch let jsonError {
+                print(jsonError)
+                callback(.failure(.error(message: "Error decoding image")))
+            }
+        }.resume()
         
     }
 }
