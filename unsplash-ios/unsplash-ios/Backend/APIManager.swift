@@ -29,10 +29,7 @@ class APIManager {
     func fetchPhoto(fetchtype: FetchType, callback: @escaping BackendCallback<QueryResult>) {
         var url = URL(string: "\(baseUrl)\(randomPhotoEndpoint)\(getAccessKey())")
         
-        switch fetchtype {
-        case .random:
-            break //Could this be written in a better way?
-        case .search(let search):
+        if case .search(let search) = fetchtype {
             url = URL(string: "\(baseUrl)\(searchPhotoEndpoint)\(getAccessKey())&query=\(search)&per_page=\(24)")
         }
         
