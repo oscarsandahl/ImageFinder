@@ -21,9 +21,9 @@ class QueryGirdPresenter {
     }
     
     // MARK: - Functions
-    func fetchQuery() {
-        guard let query = query else { return }
-        APIManager.shared.getPhotosFromQuery(query: query, itemsPerPage: 24) { (result) in
+    func fetchSearch() {
+        guard let search = query else { return }
+        APIManager.shared.fetchPhoto(fetchtype: .search(search: search)) { (result) in
             switch result {
             case.success(let data):
                 DispatchQueue.main.async {

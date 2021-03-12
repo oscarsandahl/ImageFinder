@@ -24,7 +24,7 @@ class QueryGridViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
-        presenter.fetchQuery()
+        presenter.fetchSearch()
     }
     
     // MARK: - Functions
