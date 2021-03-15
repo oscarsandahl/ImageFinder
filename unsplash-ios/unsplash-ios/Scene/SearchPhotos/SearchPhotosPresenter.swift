@@ -8,15 +8,15 @@
 import Foundation
 
 class SearchPhotosPresenter {
-    
+
     // MARK: - Variables
     weak var view: SearchPhotosViewController?
-    
+
     // MARK: - Managing view
     init(_ view: SearchPhotosViewController) {
         self.view = view
     }
-    
+
     // MARK: - Functions
     func fetchBackground() {
         view?.showSpinner(isLoading: true)
