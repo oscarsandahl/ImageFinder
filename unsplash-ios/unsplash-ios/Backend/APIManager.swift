@@ -7,6 +7,12 @@
 
 import Foundation
 
+//Should this enum be moved to a separate file?
+enum FetchType {
+    case random
+    case search(search: String)
+}
+
 class APIManager {
     
     static let shared = APIManager()
@@ -20,43 +26,36 @@ class APIManager {
         return "client_id=\(accessKey)"
     }
     
-    func getRandomPhoto(randomPhotoCompletionHandler: @escaping (Result<String, Error>) -> Void) {
-        if let url = URL(string: "\(baseUrl)\(randomPhotoEndpoint)\(getAccessKey())") {
-            URLSession.shared.dataTask(with: url) { (data, response, err) in
-                guard let data = data else { return }
-                do {
-                    let result = try JSONDecoder().decode(Image.self, from: data)
-                    if let photoDictionary = result.urls {
-                        if let photoFull = photoDictionary["full"] {
-                            randomPhotoCompletionHandler(.success(photoFull))
-                        }
-                    }
-                } catch let jsonErr {
-                    print("Error decoding random image:", jsonErr)
-                    randomPhotoCompletionHandler(.failure(jsonErr))
-                }
-            }.resume()
+    func fetchPhoto(fetchtype: FetchType, callback: @escaping BackendCallback<QueryResult>) {
+        var url = URL(string: "\(baseUrl)\(randomPhotoEndpoint)\(getAccessKey())")
+        
+        if case .search(let search) = fetchtype {
+            url = URL(string: "\(baseUrl)\(searchPhotoEndpoint)\(getAccessKey())&query=\(search)&per_page=\(24)")
         }
-    }
-    
-    func getPhotosFromQuery(query: String, itemsPerPage: Int, queryPhotosCompletionHandler: @escaping BackendCallback<QueryResult>) {
-        let queryUrl = "\(baseUrl)\(searchPhotoEndpoint)\(getAccessKey())&query=\(query)&per_page=\(itemsPerPage)"
-        guard let url = URL(string: queryUrl) else {
-            queryPhotosCompletionHandler(.failure(.empty))
+        
+        guard let unwrappedUrl = url else {
+            callback(.failure(.empty))
             return
         }
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
+        URLSession.shared.dataTask(with: unwrappedUrl) { (data, response, err) in
             guard let data = data else {
-                queryPhotosCompletionHandler(.failure(.empty))
+                callback(.failure(.empty))
                 return
             }
             do {
-                let result = try JSONDecoder().decode(QueryResult.self, from: data)
-                queryPhotosCompletionHandler(.success(result))
+                switch fetchtype {
+                case .random:
+                    let result = try JSONDecoder().decode(Image.self, from: data)
+                    callback(.success(QueryResult(results: [result])))
+                case .search:
+                    let result = try JSONDecoder().decode(QueryResult.self, from: data)
+                    callback(.success(result))
+                }
             } catch let jsonError {
                 print(jsonError)
-                queryPhotosCompletionHandler(.failure(.error(message: "Error decoding query")))
+                callback(.failure(.error(message: "Error decoding image")))
             }
         }.resume()
+        
     }
 }
