@@ -8,17 +8,17 @@
 import Foundation
 
 class ExpandedPhotoPresenter {
-    
+
     // MARK: - Variables
     weak var view: ExpandedPhotoViewController?
     var imageUrl: String?
-    
+
     // MARK: - Managing view
     init(_ view: ExpandedPhotoViewController, imageUrl: String) {
         self.view = view
         self.imageUrl = imageUrl
     }
-    
+
     // MARK: - Functions
     func fetchImage() {
         guard let imageUrl = imageUrl else { return }
