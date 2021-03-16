@@ -13,5 +13,5 @@ struct QueryResult: Decodable {
 
 struct Image: Decodable {
     let description: String?
-    let urls: [String:String]?
+    let urls: [String: String]?
 }
