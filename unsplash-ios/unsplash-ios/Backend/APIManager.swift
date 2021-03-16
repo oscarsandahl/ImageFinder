@@ -37,7 +37,7 @@ class APIManager {
             callback(.failure(.empty))
             return
         }
-        URLSession.shared.dataTask(with: unwrappedUrl) { (data, response, err) in
+        URLSession.shared.dataTask(with: unwrappedUrl) { (data, _, _) in
             guard let data = data else {
                 callback(.failure(.empty))
                 return
