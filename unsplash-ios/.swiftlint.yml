@@ -2,7 +2,6 @@ excluded:
   - Pods
   - PrivatePods
 disabled_rules:
-  - trailing_whitespace
   - trailing_comma
   - vertical_whitespace
   - line_length

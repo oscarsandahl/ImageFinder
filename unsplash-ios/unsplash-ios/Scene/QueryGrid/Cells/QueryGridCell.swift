@@ -9,18 +9,18 @@ import UIKit
 import Kingfisher
 
 class QueryGridCell: UICollectionViewCell {
-    
+
     // MARK: - Outlets
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-    
+
     // MARK: - Variables
     static let reuseIdentifier = "QueryGridCell"
-    
+
     static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
-    
+
     var imageModel: Image? {
         didSet {
             if let url = imageModel?.urls?["full"] {
@@ -28,13 +28,13 @@ class QueryGridCell: UICollectionViewCell {
             }
         }
     }
-    
+
     // MARK: - Managing view
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
     // MARK: - Functions
     func setImage(imageUrl: String) {
         self.showSpinner(isLoading: true)
@@ -42,7 +42,7 @@ class QueryGridCell: UICollectionViewCell {
             self.showSpinner(isLoading: false)
         }
     }
-    
+
     func showSpinner(isLoading: Bool) {
         if isLoading {
             loadingIndicator.startAnimating()

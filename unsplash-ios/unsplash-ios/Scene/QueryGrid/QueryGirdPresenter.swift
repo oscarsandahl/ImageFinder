@@ -8,18 +8,18 @@
 import Foundation
 
 class QueryGirdPresenter {
-    
+
     // MARK: - Variables
     weak var view: QueryGridViewController?
     var queryResult: QueryResult?
     var query: String?
-    
+
     // MARK: - Initialization
     init(_ view: QueryGridViewController, query: String) {
         self.view = view
         self.query = query
     }
-    
+
     // MARK: - Functions
     func fetchSearch() {
         guard let search = query else { return }
@@ -35,7 +35,7 @@ class QueryGirdPresenter {
             }
         }
     }
-    
+
     func openExpandedPhoto(imageUrl: String?) {
         guard let imageUrl = imageUrl else { return }
         view?.openExpandedPhoto(imageUrl: imageUrl)
