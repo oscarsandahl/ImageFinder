@@ -3,6 +3,5 @@ excluded:
   - PrivatePods
 disabled_rules:
   - line_length
-  - unused_optional_binding
 analyzer_rules:
   - unused_declaration
