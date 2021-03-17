@@ -23,10 +23,12 @@ class ExpandedPhotoViewController: UIViewController {
     // MARK: - Initialization
     class func initViewController(imageUrl: String) -> UIViewController {
         let storyboard = UIStoryboard(name: ExpandedPhotoViewController.storyboardName, bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: ExpandedPhotoViewController.viewControllerIdentifier)
+        let viewController = storyboard.instantiateViewController(
+            withIdentifier: ExpandedPhotoViewController.viewControllerIdentifier)
 
         if let expandedPhotoViewController = viewController as? ExpandedPhotoViewController {
-            expandedPhotoViewController.presenter = ExpandedPhotoPresenter(expandedPhotoViewController, imageUrl: imageUrl)
+            expandedPhotoViewController.presenter = ExpandedPhotoPresenter(expandedPhotoViewController,
+                                                                           imageUrl: imageUrl)
 
         }
 

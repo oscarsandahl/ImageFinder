@@ -2,6 +2,5 @@ excluded:
   - Pods
   - PrivatePods
 disabled_rules:
-  - line_length
 analyzer_rules:
   - unused_declaration

@@ -25,7 +25,8 @@ class SearchPhotosViewController: UIViewController {
     // MARK: - Initialization
     class func initViewController() -> UIViewController {
         let storyboard = UIStoryboard(name: SearchPhotosViewController.storyboardName, bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: SearchPhotosViewController.viewControllerIdentifier)
+        let viewController = storyboard.instantiateViewController(
+            withIdentifier: SearchPhotosViewController.viewControllerIdentifier)
 
         if let searchPhotosViewController = viewController as? SearchPhotosViewController {
             searchPhotosViewController.presenter = SearchPhotosPresenter(searchPhotosViewController)
