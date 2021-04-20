@@ -8,6 +8,8 @@
 import Foundation
 
 struct QueryResult: Decodable {
+    let total: Int?
+    let total_pages: Int?
     let results: [Image]
 }
 
