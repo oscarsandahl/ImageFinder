@@ -30,7 +30,10 @@ class APIManager {
         var url = URL(string: "\(baseUrl)\(randomPhotoEndpoint)\(getAccessKey())")
 
         if case .search(let search) = fetchtype {
-            url = URL(string: "\(baseUrl)\(searchPhotoEndpoint)\(getAccessKey())&query=\(search)&per_page=\(24)")
+            let query = "&query=\(search)"
+            let page = "&page=\(1)"
+            let itemPerPage = "&per_page=\(20)"
+            url = URL(string: "\(baseUrl)\(searchPhotoEndpoint)\(getAccessKey())\(query)\(page)\(itemPerPage)")
         }
 
         guard let unwrappedUrl = url else {
