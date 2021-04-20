@@ -49,7 +49,7 @@ class APIManager {
                 switch fetchtype {
                 case .random:
                     let result = try JSONDecoder().decode(Image.self, from: data)
-                    callback(.success(QueryResult(results: [result])))
+                    callback(.success(QueryResult(total: nil, total_pages: nil, results: [result])))
                 case .search:
                     let result = try JSONDecoder().decode(QueryResult.self, from: data)
                     callback(.success(result))
