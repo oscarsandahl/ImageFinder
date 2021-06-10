@@ -13,6 +13,7 @@
 		635A30D925ED11B00007FED6 /* QueryGirdPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A30D825ED11B00007FED6 /* QueryGirdPresenter.swift */; };
 		635A30EB25F0E1B90007FED6 /* ExpandedPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A30EA25F0E1B90007FED6 /* ExpandedPhotoViewController.swift */; };
 		635A30EE25F0E1C70007FED6 /* ExpandedPhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A30ED25F0E1C70007FED6 /* ExpandedPhotoPresenter.swift */; };
+		63819A59266FB5C40064AA31 /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63819A58266FB5C40064AA31 /* APIManagerTests.swift */; };
 		6390425F25E69BF6003372FA /* BackendCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6390425E25E69BF6003372FA /* BackendCallback.swift */; };
 		6393E55425F8BBC000EC6652 /* SearchPhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6393E55325F8BBC000EC6652 /* SearchPhotosPresenter.swift */; };
 		63A422F825E8DBD300A05500 /* QueryGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A422F725E8DBD300A05500 /* QueryGridViewController.swift */; };
@@ -26,6 +27,16 @@
 		63E61C8725E3F074007B5A4D /* ApiModelsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E61C8625E3F074007B5A4D /* ApiModelsPhoto.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		63819A5B266FB5C40064AA31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63A4B32225E3B777001C4F62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63A4B32925E3B777001C4F62;
+			remoteInfo = "unsplash-ios";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		269CC0F27747C6D60A82687D /* Pods-unsplash-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unsplash-ios.release.xcconfig"; path = "Target Support Files/Pods-unsplash-ios/Pods-unsplash-ios.release.xcconfig"; sourceTree = "<group>"; };
 		3745917E5A9A8E0391334099 /* Pods-unsplash-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unsplash-ios.debug.xcconfig"; path = "Target Support Files/Pods-unsplash-ios/Pods-unsplash-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -34,6 +45,9 @@
 		635A30D825ED11B00007FED6 /* QueryGirdPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryGirdPresenter.swift; sourceTree = "<group>"; };
 		635A30EA25F0E1B90007FED6 /* ExpandedPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedPhotoViewController.swift; sourceTree = "<group>"; };
 		635A30ED25F0E1C70007FED6 /* ExpandedPhotoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedPhotoPresenter.swift; sourceTree = "<group>"; };
+		63819A56266FB5C40064AA31 /* APIManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63819A58266FB5C40064AA31 /* APIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
+		63819A5A266FB5C40064AA31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6390425E25E69BF6003372FA /* BackendCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendCallback.swift; sourceTree = "<group>"; };
 		6393E55325F8BBC000EC6652 /* SearchPhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotosPresenter.swift; sourceTree = "<group>"; };
 		63A422F725E8DBD300A05500 /* QueryGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryGridViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +65,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		63819A53266FB5C40064AA31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63A4B32725E3B777001C4F62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,6 +110,15 @@
 			path = ExpandedPhoto;
 			sourceTree = "<group>";
 		};
+		63819A57266FB5C40064AA31 /* APIManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				63819A58266FB5C40064AA31 /* APIManagerTests.swift */,
+				63819A5A266FB5C40064AA31 /* Info.plist */,
+			);
+			path = APIManagerTests;
+			sourceTree = "<group>";
+		};
 		6390425325E64A67003372FA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				63A4B32C25E3B777001C4F62 /* unsplash-ios */,
+				63819A57266FB5C40064AA31 /* APIManagerTests */,
 				63A4B32B25E3B777001C4F62 /* Products */,
 				10C528E53EE805FB2249314F /* Pods */,
 				747ACBDF4F1D3F5388E94AC5 /* Frameworks */,
@@ -129,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				63A4B32A25E3B777001C4F62 /* unsplash-ios.app */,
+				63819A56266FB5C40064AA31 /* APIManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,6 +260,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		63819A55266FB5C40064AA31 /* APIManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63819A5F266FB5C40064AA31 /* Build configuration list for PBXNativeTarget "APIManagerTests" */;
+			buildPhases = (
+				63819A52266FB5C40064AA31 /* Sources */,
+				63819A53266FB5C40064AA31 /* Frameworks */,
+				63819A54266FB5C40064AA31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63819A5C266FB5C40064AA31 /* PBXTargetDependency */,
+			);
+			name = APIManagerTests;
+			productName = APIManagerTests;
+			productReference = 63819A56266FB5C40064AA31 /* APIManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		63A4B32925E3B777001C4F62 /* unsplash-ios */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63A4B33E25E3B778001C4F62 /* Build configuration list for PBXNativeTarget "unsplash-ios" */;
@@ -257,6 +307,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					63819A55266FB5C40064AA31 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 63A4B32925E3B777001C4F62;
+					};
 					63A4B32925E3B777001C4F62 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -276,11 +330,19 @@
 			projectRoot = "";
 			targets = (
 				63A4B32925E3B777001C4F62 /* unsplash-ios */,
+				63819A55266FB5C40064AA31 /* APIManagerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		63819A54266FB5C40064AA31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63A4B32825E3B777001C4F62 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,6 +416,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		63819A52266FB5C40064AA31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63819A59266FB5C40064AA31 /* APIManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63A4B32625E3B777001C4F62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,6 +445,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		63819A5C266FB5C40064AA31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63A4B32925E3B777001C4F62 /* unsplash-ios */;
+			targetProxy = 63819A5B266FB5C40064AA31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		63A4B33325E3B777001C4F62 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -395,6 +473,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		63819A5D266FB5C40064AA31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VYL6QL5S85;
+				INFOPLIST_FILE = APIManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oscarsandahl.APIManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/unsplash-ios.app/unsplash-ios";
+			};
+			name = Debug;
+		};
+		63819A5E266FB5C40064AA31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VYL6QL5S85;
+				INFOPLIST_FILE = APIManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oscarsandahl.APIManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/unsplash-ios.app/unsplash-ios";
+			};
+			name = Release;
+		};
 		63A4B33C25E3B778001C4F62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -554,6 +672,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		63819A5F266FB5C40064AA31 /* Build configuration list for PBXNativeTarget "APIManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63819A5D266FB5C40064AA31 /* Debug */,
+				63819A5E266FB5C40064AA31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		63A4B32525E3B777001C4F62 /* Build configuration list for PBXProject "unsplash-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
