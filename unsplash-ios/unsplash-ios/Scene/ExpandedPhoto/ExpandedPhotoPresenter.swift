@@ -22,9 +22,9 @@ class ExpandedPhotoPresenter {
     // MARK: - Functions
     func fetchImage() {
         guard let imageUrl = imageUrl else { return }
-        view?.showSpinner(isLoading: true)
+        view?.loadingIndicator.showSpinner(isLoading: true)
         view?.expandedPhoto.kf.setImage(with: URL(string: imageUrl)) { (_) in
-            self.view?.showSpinner(isLoading: false)
+            self.view?.loadingIndicator.showSpinner(isLoading: false)
         }
     }
 }

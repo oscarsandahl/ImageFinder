@@ -14,6 +14,7 @@
 		635A30EB25F0E1B90007FED6 /* ExpandedPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A30EA25F0E1B90007FED6 /* ExpandedPhotoViewController.swift */; };
 		635A30EE25F0E1C70007FED6 /* ExpandedPhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A30ED25F0E1C70007FED6 /* ExpandedPhotoPresenter.swift */; };
 		63819A59266FB5C40064AA31 /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63819A58266FB5C40064AA31 /* APIManagerTests.swift */; };
+		63819A69267212E80064AA31 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63819A68267212E80064AA31 /* LoadingIndicator.swift */; };
 		6390425F25E69BF6003372FA /* BackendCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6390425E25E69BF6003372FA /* BackendCallback.swift */; };
 		6393E55425F8BBC000EC6652 /* SearchPhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6393E55325F8BBC000EC6652 /* SearchPhotosPresenter.swift */; };
 		63A422F825E8DBD300A05500 /* QueryGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A422F725E8DBD300A05500 /* QueryGridViewController.swift */; };
@@ -48,6 +49,7 @@
 		63819A56266FB5C40064AA31 /* APIManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63819A58266FB5C40064AA31 /* APIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
 		63819A5A266FB5C40064AA31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63819A68267212E80064AA31 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		6390425E25E69BF6003372FA /* BackendCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendCallback.swift; sourceTree = "<group>"; };
 		6393E55325F8BBC000EC6652 /* SearchPhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotosPresenter.swift; sourceTree = "<group>"; };
 		63A422F725E8DBD300A05500 /* QueryGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryGridViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				63A422F625E8DB9500A05500 /* QueryGrid */,
 				6390426325E78E46003372FA /* SearchPhotos */,
 				63E61C7225E3D02D007B5A4D /* Storyboards */,
+				63819A68267212E80064AA31 /* LoadingIndicator.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				635A30D525ECE1F20007FED6 /* QueryGridCell.swift in Sources */,
 				635A30EE25F0E1C70007FED6 /* ExpandedPhotoPresenter.swift in Sources */,
 				635A30EB25F0E1B90007FED6 /* ExpandedPhotoViewController.swift in Sources */,
+				63819A69267212E80064AA31 /* LoadingIndicator.swift in Sources */,
 				63E61C8725E3F074007B5A4D /* ApiModelsPhoto.swift in Sources */,
 				63A422F825E8DBD300A05500 /* QueryGridViewController.swift in Sources */,
 				63E61C8325E3E515007B5A4D /* APIManager.swift in Sources */,

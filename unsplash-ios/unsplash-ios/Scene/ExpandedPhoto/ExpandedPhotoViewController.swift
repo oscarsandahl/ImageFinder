@@ -40,16 +40,4 @@ class ExpandedPhotoViewController: UIViewController {
         super.viewDidLoad()
         presenter.fetchImage()
     }
-
-    // MARK: - Functions
-    func showSpinner(isLoading: Bool) {
-        if isLoading {
-            loadingIndicator.startAnimating()
-            loadingIndicator.isHidden = false
-        } else {
-            loadingIndicator.isHidden = true
-            loadingIndicator.stopAnimating()
-        }
-    }
-
 }

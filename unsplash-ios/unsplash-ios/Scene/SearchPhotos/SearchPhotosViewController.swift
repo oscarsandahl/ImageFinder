@@ -42,18 +42,6 @@ class SearchPhotosViewController: UIViewController {
         searchBar.delegate = self
         presenter.fetchBackground()
     }
-
-    // MARK: - Functions
-    func showSpinner(isLoading: Bool) {
-        if isLoading {
-            loadingIndicator.startAnimating()
-            loadingIndicator.isHidden = false
-        } else {
-            loadingIndicator.isHidden = true
-            loadingIndicator.stopAnimating()
-        }
-    }
-
 }
 
 // MARK: - Searchbar delegate

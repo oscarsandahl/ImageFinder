@@ -19,20 +19,20 @@ class SearchPhotosPresenter {
 
     // MARK: - Functions
     func fetchBackground() {
-        view?.showSpinner(isLoading: true)
+        view?.loadingIndicator.showSpinner(isLoading: true)
         APIManager.shared.fetchPhoto(fetchtype: .random) { (result) in
             switch result {
             case .success(let image):
                 DispatchQueue.main.async {
                     if let imageUrl = image.results.first?.urls?["full"] {
                         self.view?.backgroundImage.kf.setImage(with: URL(string: imageUrl)) { (_) in
-                            self.view?.showSpinner(isLoading: false)
+                            self.view?.loadingIndicator.showSpinner(isLoading: false)
                         }
                     }
                 }
             case.failure(let error):
                 print(error.localizedDescription)
-                self.view?.showSpinner(isLoading: false)
+                self.view?.loadingIndicator.showSpinner(isLoading: false)
             }
         }
     }
