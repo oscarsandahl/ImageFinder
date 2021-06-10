@@ -8,7 +8,9 @@
 import Foundation
 
 struct QueryResult: Decodable {
-    let results: [Image]
+    let total: Int?
+    let total_pages: Int?
+    var results: [Image]
 }
 
 struct Image: Decodable {

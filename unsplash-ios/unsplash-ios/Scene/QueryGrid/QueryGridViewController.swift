@@ -66,12 +66,18 @@ extension QueryGridViewController: UICollectionViewDataSource {
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        presenter.loadMorePhotos(indexPath: indexPath.row)
+    }
 }
 
 // MARK: - CollectionView delegate
 extension QueryGridViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter.openExpandedPhoto(imageUrl: presenter.queryResult?.results[indexPath.row].urls?["full"])
+        presenter.openExpandedPhoto(imageUrl: presenter.queryResult?.results[indexPath.row].urls?["small"])
     }
 }
 
