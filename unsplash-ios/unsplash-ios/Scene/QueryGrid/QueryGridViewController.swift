@@ -29,12 +29,12 @@ class QueryGridViewController: UIViewController {
 
     // MARK: - Functions
     func setupCollectionView() {
-        collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(QueryGridCell.nib, forCellWithReuseIdentifier: QueryGridCell.reuseIdentifier)
-        self.view.addSubview(collectionView)
+        view.addSubview(collectionView)
     }
 
     func openExpandedPhoto(imageUrl: String) {

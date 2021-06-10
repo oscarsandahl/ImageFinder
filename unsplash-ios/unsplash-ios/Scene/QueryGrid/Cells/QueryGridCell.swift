@@ -37,8 +37,8 @@ class QueryGridCell: UICollectionViewCell {
 
     // MARK: - Functions
     func setImage(imageUrl: String) {
-        self.showSpinner(isLoading: true)
-        self.image.kf.setImage(with: URL(string: imageUrl)) { (_) in
+        showSpinner(isLoading: true)
+        image.kf.setImage(with: URL(string: imageUrl)) { (_) in
             self.showSpinner(isLoading: false)
         }
     }
@@ -48,8 +48,8 @@ class QueryGridCell: UICollectionViewCell {
             loadingIndicator.startAnimating()
             loadingIndicator.isHidden = false
         } else {
-            self.loadingIndicator.isHidden = true
-            self.loadingIndicator.stopAnimating()
+            loadingIndicator.isHidden = true
+            loadingIndicator.stopAnimating()
         }
     }
 

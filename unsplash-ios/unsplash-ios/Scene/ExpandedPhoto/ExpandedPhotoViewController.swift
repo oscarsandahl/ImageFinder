@@ -47,8 +47,8 @@ class ExpandedPhotoViewController: UIViewController {
             loadingIndicator.startAnimating()
             loadingIndicator.isHidden = false
         } else {
-            self.loadingIndicator.isHidden = true
-            self.loadingIndicator.stopAnimating()
+            loadingIndicator.isHidden = true
+            loadingIndicator.stopAnimating()
         }
     }
 
