@@ -24,7 +24,7 @@ class SearchPhotosPresenter {
             switch result {
             case .success(let image):
                 DispatchQueue.main.async {
-                    if let imageUrl = image.results.first?.urls?["full"] {
+                    if let imageUrl = image.results.first?.urls?[ImageSize.full.rawValue] {
                         self.view?.backgroundImage.kf.setImage(with: URL(string: imageUrl)) { (_) in
                             self.view?.loadingIndicator.showSpinner(isLoading: false)
                         }

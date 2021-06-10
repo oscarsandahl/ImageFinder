@@ -77,7 +77,7 @@ extension QueryGridViewController: UICollectionViewDataSource {
 // MARK: - CollectionView delegate
 extension QueryGridViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter.openExpandedPhoto(imageUrl: presenter.queryResult?.results[indexPath.row].urls?["small"])
+        presenter.openExpandedPhoto(imageUrl: presenter.queryResult?.results[indexPath.row].urls?[ImageSize.small.rawValue])
     }
 }
 
