@@ -2,5 +2,7 @@ excluded:
   - Pods
   - PrivatePods
 disabled_rules:
+identifier_name:
+  allowed_symbols: "_"
 analyzer_rules:
   - unused_declaration

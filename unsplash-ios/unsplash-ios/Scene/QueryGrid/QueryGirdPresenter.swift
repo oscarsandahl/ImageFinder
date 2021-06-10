@@ -13,6 +13,7 @@ class QueryGirdPresenter {
     weak var view: QueryGridViewController?
     var queryResult: QueryResult?
     var query: String?
+    var page: Int = 1
 
     // MARK: - Initialization
     init(_ view: QueryGridViewController, query: String) {
@@ -32,6 +33,30 @@ class QueryGirdPresenter {
                 }
             case.failure(let error):
                 print(error.localizedDescription)
+            }
+        }
+    }
+
+    func loadMorePhotos(indexPath: Int) {
+        guard let search = query, let resultCount = queryResult?.results.count else {
+            return
+        }
+        
+        if indexPath == resultCount-1 {
+            page += 1
+            APIManager.shared.fetchPhoto(fetchtype: .search(search: search), page: page) { (result) in
+                switch result {
+                case.success(let data):
+                    DispatchQueue.main.async {
+                        for photo in data.results {
+                            self.queryResult?.results.append(photo)
+                        }
+                        self.view?.collectionView.reloadData()
+                        print(self.queryResult!.results.count)
+                    }
+                case.failure(let error):
+                    print(error.localizedDescription)
+                }
             }
         }
     }
