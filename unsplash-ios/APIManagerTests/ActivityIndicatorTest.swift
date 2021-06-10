@@ -22,7 +22,15 @@ class ActivityIndicatorTest: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testIfIndicatorIsLoadingWhenItShould() {
+    func testIfIndicatorIsShownAndAnimatingWhenLoading() {
         sut.showSpinner(isLoading: true)
+        XCTAssertEqual(sut.isAnimating, true)
+        XCTAssertEqual(sut.isHidden, false)
+    }
+    
+    func testIfIndicatorIsHiddenAndNotAnimatingWhenNotLoading() {
+        sut.showSpinner(isLoading: false)
+        XCTAssertEqual(sut.isAnimating, false)
+        XCTAssertEqual(sut.isHidden, true)
     }
 }
