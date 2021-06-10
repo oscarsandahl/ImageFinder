@@ -23,7 +23,7 @@ class QueryGridCell: UICollectionViewCell {
 
     var imageModel: Image? {
         didSet {
-            if let url = imageModel?.urls?["full"] {
+            if let url = imageModel?.urls?["small"] {
                 setImage(imageUrl: url)
             }
         }
