@@ -16,6 +16,7 @@
 		63819A59266FB5C40064AA31 /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63819A58266FB5C40064AA31 /* APIManagerTests.swift */; };
 		63819A69267212E80064AA31 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63819A68267212E80064AA31 /* LoadingIndicator.swift */; };
 		63819A6D2672277F0064AA31 /* ActivityIndicatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63819A6C2672277F0064AA31 /* ActivityIndicatorTest.swift */; };
+		63819A71267235170064AA31 /* ImageSizeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63819A70267235170064AA31 /* ImageSizeTest.swift */; };
 		6390425F25E69BF6003372FA /* BackendCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6390425E25E69BF6003372FA /* BackendCallback.swift */; };
 		6393E55425F8BBC000EC6652 /* SearchPhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6393E55325F8BBC000EC6652 /* SearchPhotosPresenter.swift */; };
 		63A422F825E8DBD300A05500 /* QueryGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A422F725E8DBD300A05500 /* QueryGridViewController.swift */; };
@@ -52,6 +53,7 @@
 		63819A5A266FB5C40064AA31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63819A68267212E80064AA31 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		63819A6C2672277F0064AA31 /* ActivityIndicatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorTest.swift; sourceTree = "<group>"; };
+		63819A70267235170064AA31 /* ImageSizeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSizeTest.swift; sourceTree = "<group>"; };
 		6390425E25E69BF6003372FA /* BackendCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendCallback.swift; sourceTree = "<group>"; };
 		6393E55325F8BBC000EC6652 /* SearchPhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotosPresenter.swift; sourceTree = "<group>"; };
 		63A422F725E8DBD300A05500 /* QueryGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryGridViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		63819A57266FB5C40064AA31 /* APIManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				63819A70267235170064AA31 /* ImageSizeTest.swift */,
 				63819A6C2672277F0064AA31 /* ActivityIndicatorTest.swift */,
 				63819A58266FB5C40064AA31 /* APIManagerTests.swift */,
 				63819A5A266FB5C40064AA31 /* Info.plist */,
@@ -426,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63819A71267235170064AA31 /* ImageSizeTest.swift in Sources */,
 				63819A6D2672277F0064AA31 /* ActivityIndicatorTest.swift in Sources */,
 				63819A59266FB5C40064AA31 /* APIManagerTests.swift in Sources */,
 			);
