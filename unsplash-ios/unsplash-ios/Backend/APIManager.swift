@@ -7,14 +7,12 @@
 
 import Foundation
 
-// Should this enum be moved to a separate file?
 enum FetchType {
     case random
     case search(search: String)
 }
 
 class APIManager {
-
     static let shared = APIManager()
     let accessKey = "EtWsatXcwQKXGTQgPNh1mQUO3HR_LoW0Z_ZpxU7y_PA"
     let secretKey = "ra95FPU6vtIexK5w0R5F59a5ILGwOY2vVMQ8QYR3yjU"
@@ -26,12 +24,12 @@ class APIManager {
         return "client_id=\(accessKey)"
     }
 
-    func fetchPhoto(fetchtype: FetchType, callback: @escaping BackendCallback<QueryResult>) {
+    func fetchPhoto(fetchtype: FetchType, page: Int = 1, callback: @escaping BackendCallback<QueryResult>) {
         var url = URL(string: "\(baseUrl)\(randomPhotoEndpoint)\(getAccessKey())")
 
         if case .search(let search) = fetchtype {
             let query = "&query=\(search)"
-            let page = "&page=\(1)"
+            let page = "&page=\(page)"
             let itemPerPage = "&per_page=\(20)"
             url = URL(string: "\(baseUrl)\(searchPhotoEndpoint)\(getAccessKey())\(query)\(page)\(itemPerPage)")
         }
@@ -59,6 +57,5 @@ class APIManager {
                 callback(.failure(.error(message: "Error decoding image")))
             }
         }.resume()
-
     }
 }

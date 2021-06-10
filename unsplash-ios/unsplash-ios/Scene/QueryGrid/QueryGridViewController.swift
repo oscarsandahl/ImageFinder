@@ -66,6 +66,12 @@ extension QueryGridViewController: UICollectionViewDataSource {
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        presenter.loadMorePhotos(indexPath: indexPath.row)
+    }
 }
 
 // MARK: - CollectionView delegate
