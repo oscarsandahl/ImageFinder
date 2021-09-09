@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -84,13 +84,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10C528E53EE805FB2249314F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		635A30D225ECE1BD0007FED6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +145,6 @@
 				63A4B32C25E3B777001C4F62 /* unsplash-ios */,
 				63819A57266FB5C40064AA31 /* APIManagerTests */,
 				63A4B32B25E3B777001C4F62 /* Products */,
-				10C528E53EE805FB2249314F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
