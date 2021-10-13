@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		631C6C002716D1D3000EB181 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 631C6BFF2716D1D3000EB181 /* Kingfisher */; };
 		635A30D525ECE1F20007FED6 /* QueryGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A30D325ECE1F20007FED6 /* QueryGridCell.swift */; };
 		635A30D625ECE1F20007FED6 /* QueryGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635A30D425ECE1F20007FED6 /* QueryGridCell.xib */; };
 		635A30D925ED11B00007FED6 /* QueryGirdPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A30D825ED11B00007FED6 /* QueryGirdPresenter.swift */; };
@@ -78,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				631C6C002716D1D3000EB181 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,13 +272,15 @@
 				63A4B32625E3B777001C4F62 /* Sources */,
 				63A4B32725E3B777001C4F62 /* Frameworks */,
 				63A4B32825E3B777001C4F62 /* Resources */,
-				631D49C025FA08090081C91C /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "unsplash-ios";
+			packageProductDependencies = (
+				631C6BFF2716D1D3000EB181 /* Kingfisher */,
+			);
 			productName = "unsplash-ios";
 			productReference = 63A4B32A25E3B777001C4F62 /* unsplash-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -308,6 +312,9 @@
 				Base,
 			);
 			mainGroup = 63A4B32125E3B777001C4F62;
+			packageReferences = (
+				631C6BFE2716D1D3000EB181 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 63A4B32B25E3B777001C4F62 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -338,26 +345,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		631D49C025FA08090081C91C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63819A52266FB5C40064AA31 /* Sources */ = {
@@ -645,6 +632,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		631C6BFE2716D1D3000EB181 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		631C6BFF2716D1D3000EB181 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 631C6BFE2716D1D3000EB181 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63A4B32225E3B777001C4F62 /* Project object */;
 }
