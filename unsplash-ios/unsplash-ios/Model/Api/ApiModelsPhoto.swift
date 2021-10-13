@@ -7,7 +7,18 @@
 
 import Foundation
 
+enum ImageSize: String {
+    case small
+    case full
+}
+
+struct QueryResult: Decodable {
+    let total: Int?
+    let total_pages: Int?
+    var results: [Image]
+}
+
 struct Image: Decodable {
     let description: String?
-    let urls: [String:String]?
+    let urls: [String: String]?
 }
