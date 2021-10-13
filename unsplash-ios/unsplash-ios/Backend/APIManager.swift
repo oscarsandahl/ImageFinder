@@ -23,7 +23,7 @@ class APIManager {
     func getAccessKey() -> String {
         return "client_id=\(accessKey)"
     }
-
+  
     func fetchPhoto(fetchtype: FetchType, page: Int = 1, callback: @escaping BackendCallback<QueryResult>) {
         var url = URL(string: "\(baseUrl)\(randomPhotoEndpoint)\(getAccessKey())")
 
